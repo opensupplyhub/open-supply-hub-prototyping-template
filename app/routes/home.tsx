@@ -1,4 +1,5 @@
 import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 
@@ -39,6 +40,17 @@ export default function Home() {
           Fork this repository on GitHub (or your Git host) to create your own
           copy, then clone it locally and run the dev server to get started.
         </Typography>
+        <Button
+          component="a"
+          href="https://opensupplyhub.org/"
+          target="_blank"
+          rel="noopener noreferrer"
+          variant="contained"
+          color="primary"
+          sx={{ mt: 3 }}
+        >
+          Visit Open Supply Hub
+        </Button>
       </Container>
     </Box>
   );
