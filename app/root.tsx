@@ -1,3 +1,5 @@
+import CssBaseline from "@mui/material/CssBaseline";
+import { ThemeProvider } from "@mui/material/styles";
 import {
   isRouteErrorResponse,
   Links,
@@ -9,6 +11,7 @@ import {
 
 import type { Route } from "./+types/root";
 import "./app.css";
+import { appTheme } from "./theme";
 
 export const links: Route.LinksFunction = () => [
   {
@@ -57,7 +60,10 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
-        {children}
+        <ThemeProvider theme={appTheme}>
+          <CssBaseline />
+          {children}
+        </ThemeProvider>
         <ScrollRestoration />
         <Scripts />
       </body>
