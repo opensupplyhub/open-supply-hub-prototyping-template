@@ -68,13 +68,13 @@ public/               # Static assets (favicons, etc.)
 
 The `resources/` directory contains detailed reference material for building OS Hub prototypes:
 
-| File | Description |
-|------|-------------|
-| `mission-statement.md` | OS Hub mission and values |
-| `api-docs.md` | API endpoints (legacy + v1) |
-| `data-model.md` | Full database schema (entities and relationships) |
-| `data-schema-rfc-production-locations.md` | v1 production location object schema |
-| `data-schema-rfc-partner-fields.md` | Partner fields JSON Schema validation |
-| `how-to-contribute-data.md` | Data upload format and requirements |
+| File                                      | Description                                       |
+| ----------------------------------------- | ------------------------------------------------- |
+| `mission-statement.md`                    | OS Hub mission and values                         |
+| `api-docs.md`                             | API endpoints (legacy + v1)                       |
+| `data-model.md`                           | Full database schema (entities and relationships) |
+| `data-schema-rfc-production-locations.md` | v1 production location object schema              |
+| `data-schema-rfc-partner-fields.md`       | Partner fields JSON Schema validation             |
+| `how-to-contribute-data.md`               | Data upload format and requirements               |
 
 **Core domain concepts:** production locations (facilities/factories identified by OS ID), contributors (organizations that submit data), facility lists (uploaded CSV/Excel files), and facility matching (deduplication algorithm).

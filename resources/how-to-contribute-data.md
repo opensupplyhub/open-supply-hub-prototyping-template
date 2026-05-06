@@ -1,6 +1,7 @@
 # How to Contribute Data to Open Supply Hub
 
 > Sources:
+>
 > - [Preparing data for upload](https://info.opensupplyhub.org/resources/preparing-data)
 > - [Making the most of Open Supply Hub](https://info.opensupplyhub.org/resources/making-the-most-of-open-supply-hub)
 
