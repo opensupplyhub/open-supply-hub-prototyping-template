@@ -2,6 +2,23 @@
 
 A front-end prototyping template for [Open Supply Hub](https://opensupplyhub.org), the open platform that maps global supply chains. OS Hub makes supply chain data open, accessible, and trusted — tracking 2.5M+ production locations across 225 countries.
 
+## How to Use This Template
+
+Each prototype should live in its own fork of this repo.
+
+1. **Fork** — click "Fork" on GitHub to create a copy under your account or the org. Give it a descriptive name for your prototype.
+2. **Clone your fork**
+   ```bash
+   git clone git@github.com:<your-username>/<your-fork-name>.git
+   cd <your-fork-name>
+   ```
+3. **Install dependencies** and start developing (see [Getting Started](#getting-started) below).
+
+### Tips
+
+- Keep the template's `main` branch clean in your fork so you can pull in future template updates.
+- Work on a branch and merge to `main` when you want to deploy.
+
 ## Tech Stack
 
 - **React 19** with **React Router 7** (SPA mode, no SSR)
@@ -50,7 +67,7 @@ npm run build
 
 ## Deployment
 
-The app deploys automatically to **GitHub Pages** on push to `main` via the workflow in `.github/workflows/deploy.yml`. The client build output is served as a static site.
+GitHub Actions are already configured — your fork will automatically build and deploy to GitHub Pages on every push to `main`. To enable it, go to your fork's **Settings > Pages > Source** and select **GitHub Actions**. Once enabled, your prototype will be published to `https://<owner>.github.io/<repo-name>/`.
 
 ## Project Structure
 
