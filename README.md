@@ -1,24 +1,26 @@
-# Welcome to React Router!
+# Open Supply Hub — Prototyping Template
 
-A modern, production-ready template for building full-stack React applications using React Router.
+A front-end prototyping template for [Open Supply Hub](https://opensupplyhub.org), the open platform that maps global supply chains. OS Hub makes supply chain data open, accessible, and trusted — tracking 2.5M+ production locations across 225 countries.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+## Tech Stack
 
-## Features
+- **React 19** with **React Router 7** (SPA mode, no SSR)
+- **TypeScript**
+- **MUI v9** + **Tailwind CSS v4** for styling
+- **Vite 8** for bundling and dev server
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+## Prerequisites
+
+You need [Node.js](https://nodejs.org/) installed (v20 or later recommended). Install it via:
+
+- **Official installer:** https://nodejs.org/en/download
+- **nvm (Node Version Manager):** https://github.com/nvm-sh/nvm
+- **fnm (Fast Node Manager):** https://github.com/Schniz/fnm
+- **Homebrew (macOS):** `brew install node`
 
 ## Getting Started
 
 ### Installation
-
-Install the dependencies:
 
 ```bash
 npm install
@@ -34,9 +36,13 @@ npm run dev
 
 Your application will be available at `http://localhost:5173`.
 
-## Building for Production
+### Type Checking
 
-Create a production build:
+```bash
+npm run typecheck
+```
+
+### Production Build
 
 ```bash
 npm run build
@@ -44,44 +50,31 @@ npm run build
 
 ## Deployment
 
-### Docker Deployment
+The app deploys automatically to **GitHub Pages** on push to `main` via the workflow in `.github/workflows/deploy.yml`. The client build output is served as a static site.
 
-To build and run using Docker:
-
-```bash
-docker build -t my-app .
-
-# Run the container
-docker run -p 3000:3000 my-app
-```
-
-The containerized application can be deployed to any platform that supports Docker, including:
-
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
-
-### DIY Deployment
-
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
+## Project Structure
 
 ```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
+app/
+├── root.tsx          # Root layout
+├── routes.ts         # Route definitions
+├── routes/home.tsx   # Home page
+└── theme.ts          # MUI theme configuration
+resources/            # Domain reference material
+public/               # Static assets (favicons, etc.)
 ```
 
-## Styling
+## Domain Context
 
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
+The `resources/` directory contains detailed reference material for building OS Hub prototypes:
 
----
+| File | Description |
+|------|-------------|
+| `mission-statement.md` | OS Hub mission and values |
+| `api-docs.md` | API endpoints (legacy + v1) |
+| `data-model.md` | Full database schema (entities and relationships) |
+| `data-schema-rfc-production-locations.md` | v1 production location object schema |
+| `data-schema-rfc-partner-fields.md` | Partner fields JSON Schema validation |
+| `how-to-contribute-data.md` | Data upload format and requirements |
 
-Built with ❤️ using React Router.
+**Core domain concepts:** production locations (facilities/factories identified by OS ID), contributors (organizations that submit data), facility lists (uploaded CSV/Excel files), and facility matching (deduplication algorithm).
